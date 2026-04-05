@@ -2,11 +2,6 @@
 # Specify the source type
 origin_resource = "provider"
 
-# Command line paramter
-subscription = "{{- subscription | default(value='core') -}}"
-stage = "{{- stage | default(value='DEV') -}}"
-resident = "{{- tenant | default(value='resident') -}}"
-
 [[create_resource]]
 resource_type = "subscription"
 name = " {{- origin_resource.name | lower -}}_{{- stage | lower -}}_{{- subscription | lower -}}"
