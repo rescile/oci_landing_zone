@@ -8,5 +8,5 @@ name = "oracle"
 [create_resource.properties]
 #commercial_admin = "{{- operators[resident].commercial_contact -}}"
 #technical_admin = "{{- operators[resident].technical_contact -}}"
-#description = "{{ operators[resident].name | capitalize }} operates the service and has private, secure access to the set of zone and provider information within the hybrid cloud platform."
+description = "Oracle Cloud Infrastructure (OCI) ist ein Cloud-Anbieter, der sich primär auf die leistungsstarke Ausführung von Datenbanken und Unternehmensanwendungen durch eine flache Netzwerkarchitektur und Bare-Metal-Instanzen spezialisiert hat. Technisch unterscheidet sich OCI von Mitbewerbern vor allem durch die strikte Trennung von Netzwerk- und Rechenressourcen, was die Sicherheit erhöht und eine konstante Performance für komplexe Workloads ermöglicht."
 created = "{{- now(utc=true) | date(format='%Y-%m-%dT%H:%M:%SZ') -}}"
