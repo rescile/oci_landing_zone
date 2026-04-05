@@ -1,0 +1,12 @@
+# The resident is a top level node that represents the owner of a subscription in the graph
+
+# Create resource type
+[[create_resource]]
+resource_type = "provider"
+relation_type = "DEFINED_BY"
+name = "oracle"
+[create_resource.properties]
+#commercial_admin = "{{- operators[resident].commercial_contact -}}"
+#technical_admin = "{{- operators[resident].technical_contact -}}"
+#description = "{{ operators[resident].name | capitalize }} operates the service and has private, secure access to the set of zone and provider information within the hybrid cloud platform."
+created = "{{- now(utc=true) | date(format='%Y-%m-%dT%H:%M:%SZ') -}}"

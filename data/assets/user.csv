@@ -1,0 +1,4 @@
+role,function,scope,
+administrator,cloud,root
+manager,cloud,account
+operator,cloud,kubernetes

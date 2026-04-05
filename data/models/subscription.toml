@@ -1,15 +1,15 @@
 # Sets a subscription object as central root.
 # Specify the source type
-origin_resource = "operator"
+origin_resource = "provider"
 
 # Command line paramter
-subscription = "{{- scope | default(value='hybridDNS') -}}"
-stage = "{{- lifecycle | default(value='DEV') -}}"
-resident = "{{- tenant | default(value='test') -}}"
+subscription = "{{- subscription | default(value='core') -}}"
+stage = "{{- stage | default(value='DEV') -}}"
+resident = "{{- tenant | default(value='resident') -}}"
 
 [[create_resource]]
 resource_type = "subscription"
-name = " {{- subscription | lower -}}_{{- resident | lower -}}_{{- stage | lower -}}"
+name = " {{- origin_resource.name | lower -}}_{{- stage | lower -}}_{{- subscription | lower -}}"
 [create_resource.properties]
 function = "dns"
 operator = "{{- origin_resource.name | lower -}}"
