@@ -44,7 +44,7 @@ if exist "%BINARY_PATH%" (
         echo [ERROR] Failed to fetch download URL and checksum.
         exit /b 1
     )
-    
+
     for /f "tokens=1,2 delims=|" %%a in ("%DOWNLOAD_INFO%") do (
         set "DOWNLOAD_URL=%%a"
         set "EXPECTED_SHA=%%b"
@@ -52,7 +52,7 @@ if exist "%BINARY_PATH%" (
 
     if not defined DOWNLOAD_URL (echo [ERROR] Could not parse download URL. & exit /b 1)
     if not defined EXPECTED_SHA (echo [ERROR] Could not parse checksum. & exit /b 1)
-    
+
     :: Download
     if not exist "%BIN_DIR%" mkdir "%BIN_DIR%"
     set "TMP_FILE=%BINARY_PATH%.tmp.%RANDOM%"
@@ -63,7 +63,7 @@ if exist "%BINARY_PATH%" (
         if exist "%TMP_FILE%" del "%TMP_FILE%"
         exit /b 1
     )
-    
+
     :: Verify checksum using PowerShell for reliability
     echo [INFO] Verifying checksum...
     for /f "usebackq" %%H in (`powershell -NoProfile -Command "(Get-FileHash -Path '%TMP_FILE%' -Algorithm SHA256).Hash.ToLower()"`) do (

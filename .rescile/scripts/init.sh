@@ -1,3 +1,4 @@
+
 #!/usr/bin/env bash
 #
 # This script manages the local installation of the rescile-ce binary.
