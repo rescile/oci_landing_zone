@@ -2,10 +2,10 @@ origin_resource = "provider"
 
 [[link_resources]]
 with = "user"
-on = { local = "commercial_admin", remote = "name" }
+join = { local = "commercial_admin", remote = "name" }
 create_relation = { type = "RESPONSIBLE_FOR" }
 
 [[link_resources]]
 with = "user"
-on = { local = "technical_admin", remote = "name" }
+join = { local = "technical_admin", remote = "name" }
 create_relation = { type = "MANAGED_BY" }

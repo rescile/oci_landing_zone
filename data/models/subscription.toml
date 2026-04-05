@@ -4,7 +4,7 @@ origin_resource = "provider"
 
 [[create_resource]]
 resource_type = "subscription"
-name = " {{- origin_resource.name | lower -}}_{{- stage | lower -}}_{{- subscription | lower -}}"
+name = " {{- origin_resource.name | lower -}}_{{- stage | lower -}}_{{- solution | lower -}}"
 [create_resource.properties]
 function = "dns"
 provider = "{{- origin_resource.name | lower -}}"

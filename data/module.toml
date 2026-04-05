@@ -12,8 +12,8 @@ graphviewer = "https://github.com/rescile/graphviewer"
 graml-module =  "https://github.com/rescile/graphml-module"
 rescile-graphiql-module = "https://github.com/rescile/rescile-graphiql-module/releases/download/v0.0.3/graphiql-module-offline.zip"
 
-[params.subscription]
-description = "The subscription describes the solution footprint."
+[params.solution]
+description = "The solution describes the service footprint."
 required = true
 default = "OCI Landing Zone"
 
