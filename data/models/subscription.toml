@@ -8,7 +8,7 @@ name = " {{- origin_resource.name | lower -}}_{{- stage | lower -}}_{{- subscrip
 [create_resource.properties]
 function = "dns"
 operator = "{{- origin_resource.name | lower -}}"
-tenant = "{{- resident | lower -}}"
+tenant = "{{- tenant | lower -}}"
 description = "This subscription defines the cloud environment for the resident rescile and captures the dependencies for the solution deployment."
 #cost_center = "{{- solutions[solution].cost_center -}}"
 stage = "{{- stage | lower -}}"
