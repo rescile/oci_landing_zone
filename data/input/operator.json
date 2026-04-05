@@ -1,0 +1,39 @@
+{
+  "operators": {
+    "infrastructure": {
+      "scope": "cloud",
+      "roles": [
+        {
+          "name": "administrator",
+          "function": "technical",
+          "scope": "system"
+        },
+        {
+          "name": "Hardware Technician",
+          "function": "Server maintenance",
+          "scope": "Local Rack/Availability Zone"
+        }
+      ]
+    },
+    "platform": {
+      "scope": "cloud",
+      "roles": [
+        {
+          "name": "DevOps Engineer",
+          "function": "CI/CD Pipeline management",
+          "scope": "Cluster-wide orchestration"
+        }
+      ]
+    },
+    "service": {
+      "scope": "twilio",
+      "roles": [
+        {
+          "name": "Service Desk Lead",
+          "function": "Incident response",
+          "scope": "User-facing applications"
+        }
+      ]
+    }
+  }
+}

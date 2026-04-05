@@ -1,0 +1,35 @@
+[module]
+name = "hybridDNS"
+url = "https://github.com/rescile/public_dns"
+version = "0.0.1"
+description = "A hybrid authoritative DNS architecture combining globally distributed anycast nodes with on-premises authoritative servers under a shared zone authority."
+rescile_version = ">=0.1.106"
+
+# dependencies: Optional list of other modules this module depends on.
+# These can be local paths (relative to this module) or Git URLs.
+[dependencies]
+graphviewer = "https://github.com/rescile/graphviewer"
+graml-module =  "https://github.com/rescile/graphml-module"
+module-simple-editor = "https://github.com/rescile/module-simple-editor"
+rescile-graphiql-module = "https://github.com/rescile/rescile-graphiql-module/releases/download/v0.0.3/graphiql-module-offline.zip"
+
+[params.operator]
+description = "The organization owning the environment."
+default = "rescile"
+required = true
+
+[params.scope]
+description = "The scope describes the solution footprint."
+required = true
+default = "OCI Landing Zone"
+
+[params.lifecycle]
+description = "The lifecycle stage of the solution."
+required = true
+default = "DEV"
+allowed_values = ["DEV", "TEST", "PROD"]
+
+[params.tenant]
+description = "The tenant name identifiers the organization that uses the service."
+required = true
+default = "clienta"
