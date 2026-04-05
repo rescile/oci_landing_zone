@@ -32,4 +32,6 @@ default = "rescile"
 resource_type = "user" # Optional: Explicitly map the file to a resource type
 description = "The main asset file defining the users."
 [assets."user.csv".columns]
-role = { type = "string", required = true }
+name = { type = "string", required = true }
+function = { type = "string", required = true }
+scope = { type = "string", required = false }

@@ -1,4 +1,4 @@
-# The resident is a top level node that represents the owner of a subscription in the graph
+# The provider represents the operator of a subscription
 
 # Create resource type
 [[create_resource]]
@@ -6,7 +6,7 @@ resource_type = "provider"
 relation_type = "DEFINED_BY"
 name = "oracle"
 [create_resource.properties]
-#commercial_admin = "{{- operators[resident].commercial_contact -}}"
-#technical_admin = "{{- operators[resident].technical_contact -}}"
+commercial_admin = "account_manager"
+technical_admin = "root_administrator"
 description = "Oracle Cloud Infrastructure (OCI) ist ein Cloud-Anbieter, der sich primär auf die leistungsstarke Ausführung von Datenbanken und Unternehmensanwendungen durch eine flache Netzwerkarchitektur und Bare-Metal-Instanzen spezialisiert hat. Technisch unterscheidet sich OCI von Mitbewerbern vor allem durch die strikte Trennung von Netzwerk- und Rechenressourcen, was die Sicherheit erhöht und eine konstante Performance für komplexe Workloads ermöglicht."
 created = "{{- now(utc=true) | date(format='%Y-%m-%dT%H:%M:%SZ') -}}"
