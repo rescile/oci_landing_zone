@@ -21,10 +21,12 @@ This project follows a "push-Only" methodology:
 
 ## Assets
 
-Unlike traditional cloud deployments, this architecture uses rescile Universal Configuration Server (UCS) to map on-premise identities to anonymized, synthetic pointers within OCI.
+Unlike traditional cloud deployments, this architecture leverages the Rescile Universal Configuration Server (UCS) to decouple on-premise identities from cloud resources. By mapping sensitive internal data to anonymized, synthetic pointers within OCI, the system ensures that the cloud provider maintains zero-knowledge of the actual user identity while still providing seamless access to authorized resources.
 
 | Asset | Table | Description |
 | :--- | :----: | :--- |
+| Application | applications.csv | A registry of cloud-native and legacy workloads authorized to interact with the UCS. This table maps specific application IDs to their required resource scopes, ensuring that service-to-service communication remains compartmentalized and secure. |
+| Database | database.csv | A catalog of OCI-hosted data stores and their associated synthetic access keys. It defines the connection strings and schema permissions required for applications to store or retrieve data without exposing the underlying physical infrastructure details. |
 | Identity | identity.csv | Synthetic identities that maintain an on-prem source of truth. By decoupling the cloud login from personal data, cloud identities function as anonymized resource pointers that provide access while keeping the actual user's identity hidden from the cloud provider. |
 
 ## Base Resources
