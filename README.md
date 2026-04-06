@@ -3,7 +3,7 @@
 This project automates the deployment of a hardened Oracle Cloud Infrastructure (OCI) Landing Zone. The primary goal is to maintain an On-Premise Source of Truth while treating the cloud purely as a resource provider. The rescile Universal Configuration Server (UCS) acts as the brain of the operation. It ingests local organizational data and transforms it into OCI-native API calls or OpenTofu/Terraform configurations.
 
 ### Deployment Logic
-The project follows a Push-Only methodology:
+This project follows a "push-Only" methodology:
 1. Extract: A local job exports dynamic resource description like identities, applications and databases from a local inventory.
 2. Transform: rescile UCS processes the data, stripping away PII (Personally Identifiable Information) and generating OCI-compliant resource definitions.
 3. Load: The engine executes the configuration, ensuring that OCI Users, Groups, and IAM Policies perfectly mirror the intended local state.
