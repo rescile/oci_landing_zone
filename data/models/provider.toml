@@ -5,6 +5,7 @@ resource_type = "provider"
 relation_type = "DEFINED_BY"
 name = "oracle"
 [create_resource.properties]
+function = "core"
 commercial_admin = "account_manager"
 technical_admin = "root_administrator"
 description = "Oracle Cloud Infrastructure (OCI) ist ein Cloud-Anbieter, der sich primär auf die leistungsstarke Ausführung von Datenbanken und Unternehmensanwendungen durch eine flache Netzwerkarchitektur und Bare-Metal-Instanzen spezialisiert hat. Technisch unterscheidet sich OCI von Mitbewerbern vor allem durch die strikte Trennung von Netzwerk- und Rechenressourcen, was die Sicherheit erhöht und eine konstante Performance für komplexe Workloads ermöglicht."

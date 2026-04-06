@@ -41,3 +41,5 @@ The foundation of the OCI Landing Zone is defined by three core configuration en
 
 ### Why this Model matters for Sovereignty
 By separating the Login (how we get in) from the Subscription (what we own), the rescile configuration server ensures that even if a specific login is rotated or revoked, the underlying subscription and its sovereign data remains intact. This structure allows for a "clean" handover and complete lifecycle management of the landing zone.
+
+## Network Resources
