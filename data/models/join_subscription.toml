@@ -1,5 +1,5 @@
-origin_resource = "subscription"
+origin_resource = "login"
 
 [[link_resources]]
-with = "user"
+with = "identity"
 create_relation = { type = "OPERATED_BY" }

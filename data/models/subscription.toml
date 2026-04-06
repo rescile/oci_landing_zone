@@ -1,5 +1,4 @@
-# Sets a subscription object as central root.
-# Specify the source type
+# A subscription is an active contract that grants permission to use the resources at a cloud provider. It acts as the bridge between an identity and a provider's billing system.
 origin_resource = "provider"
 
 [[create_resource]]
