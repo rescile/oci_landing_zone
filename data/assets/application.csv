@@ -1,0 +1,2 @@
+name,function,domain,version,patch_level,release_date,runtime,os,platform,package,datastore,segment,port,cpu,memory,volume,maintainer,license,repository,price,billing,description
+rescile-ce,management,access,tbd,tbd,tbd,rust,lxc,nixos,,,backend,"80,443",4,64,128,,Apache2,https://github.com/rescile,1,application,Universal Configuration Server

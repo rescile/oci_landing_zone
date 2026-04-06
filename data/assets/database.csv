@@ -1,0 +1,2 @@
+name,function,domain,technology,role,port,queue,stream,description
+enum,oltp,core,postgresql,administrator,5432,,,"The Enum database is based on the open-source PostgreSQL database management system that offers robust features such as ACID compliance, advanced query optimization, and support for complex data types. It is widely used in enterprise environments for mission-critical applications."
