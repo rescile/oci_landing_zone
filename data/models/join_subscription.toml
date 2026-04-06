@@ -1,5 +1,0 @@
-origin_resource = "login"
-
-[[link_resources]]
-with = "identity"
-create_relation = { type = "OPERATED_BY" }

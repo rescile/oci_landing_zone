@@ -1,4 +1,4 @@
-name,function
-administrator,root
-manager,account
-operator,kubernetes
+name,function,description
+administrator,root,"The root administrator creates a supueruser for a cloud account with full access to all settings."
+manager,account,"The account manager is a commercial contact at a cloud provider, responsible for billing and resource management."
+operator,kubernetes,"The Kubernetes operator has the necessary permissions to manage the Kubernetes resources at a cloud provider."
