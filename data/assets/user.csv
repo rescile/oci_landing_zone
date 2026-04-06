@@ -1,4 +1,4 @@
-name,function,scope
-root_administrator,administrator,root
-account_manager,manager,account
-kubernetes_operator,operator,kubernetes
+name,function
+administrator,root
+manager,account
+operator,kubernetes

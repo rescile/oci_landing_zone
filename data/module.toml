@@ -31,6 +31,7 @@ default = "rescile"
 [assets."user.csv"]
 resource_type = "user" # Optional: Explicitly map the file to a resource type
 description = "The main asset file defining the users."
+name_template = "{{- function | lower -}}_{{- name  | lower -}}"
 [assets."user.csv".columns]
 name = { type = "string", required = true }
 function = { type = "string", required = true }
