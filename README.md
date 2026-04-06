@@ -4,7 +4,7 @@ This project automates the deployment of a hardened Oracle Cloud Infrastructure 
 
 ### Deployment Logic
 The project follows a Push-Only methodology:
-1. Extract: A local job exports the required user groups and entitlements from your on-prem IAM.
+1. Extract: A local job exports dynamic resource description like identities, applications and databases from a local inventory.
 2. Transform: rescile UCS processes the data, stripping away PII (Personally Identifiable Information) and generating OCI-compliant resource definitions.
 3. Load: The engine executes the configuration, ensuring that OCI Users, Groups, and IAM Policies perfectly mirror the intended local state.
 
