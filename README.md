@@ -1,6 +1,6 @@
 # Mini Landing Zone
 
-This project automates the deployment of a hardened Oracle Cloud Infrastructure (OCI) Landing Zone. The primary goal is to maintain an On-Premise Source of Truth while treating the cloud purely as a resource provider. The rescile Universal Configuration Server (UCS) acts as the brain of the operation. It ingests local organizational data and transforms it into OCI-native API calls or OpenTofu/Terraform configurations.
+This project automates the deployment of a small landing zone to build a priviate connection to a cloud provider. The rescile Universal Configuration Server (UCS) acts as the brain of the operation. The primary goal is to maintain an On-Premise Source of Truth while treating the cloud purely as a resource provider. IUCS ingests local organizational data and transforms it into cloud-native API calls or OpenTofu/Terraform configurations.
 
 ### Deployment Logic
 This project follows a "push-Only" methodology:
