@@ -29,7 +29,7 @@ Unlike traditional Infrastructure-as-Code approaches, this projects leverages th
 | Database | database.csv | A catalog of OCI-hosted data stores and their associated synthetic access keys. It defines the connection strings and schema permissions required for applications to store or retrieve data without exposing the underlying physical infrastructure details. |
 | Identity | identity.csv | Synthetic identities that maintain an on-prem source of truth. By decoupling the cloud login from personal data, cloud identities function as anonymized resource pointers that provide access while keeping the actual user's identity hidden from the cloud provider. |
 
-## Required Resources
+ ## Required Resources
 
 | Category | Component | Purpose for Switzerland/FINMA |
 | :--- | :--- | :--- |
@@ -65,3 +65,17 @@ By separating the Login (how we get in) from the Subscription (what we own), the
 * **Direct Connect Gateway (DXGW):** Acts as a global anchor for your Megaport VXC.
 * **Transit Gateway (TGW):** The central router in your Network Account. It allows the Megaport line to be shared securely across multiple AWS accounts.
 * **Interface VPC Endpoint:** This is the **Salesforce Private Connect** resource. It places a private IP (e.g., `10.0.1.50`) directly into your VPC in Zurich.
+
+
+## Compliance Guardrails
+In **AWS Control Tower**, you must activate specific **Controls** (Guardrails) to ensure your data stays in Zurich and the environment remains secure.
+
+### Data Residency Controls (The "Swiss Lock")
+1.  **Region Deny (Preventive):** Activate this in Landing Zone settings to block all AWS regions **except `eu-central-2` (Zurich)** and `eu-central-1` (Frankfurt, as a common backup/management region). This ensures no one accidentally spins up a database in the US or Asia.
+2.  **Disallow Internet Gateways (Preventive):** This prevents anyone from attaching an Internet Gateway (IGW) to your Salesforce VPC. This forces all traffic to stay on your private Megaport line.
+3.  **Disallow Virtual Private Gateways (Preventive):** Ensures that "Shadow IT" doesn't set up unapproved VPNs outside of your controlled Megaport/Transit Gateway architecture.
+
+### Security & Audit Controls 
+4.  **Disallow Changes to CloudTrail (Mandatory):** Ensures that no user (even an admin) can stop the recording of API actions.
+5.  **Detect Public Read/Write on S3 (Detective):** If anyone accidentally makes a storage bucket public, you get an immediate alert in the Security Account.
+6.  **Enable Integrity Validation for CloudTrail (Mandatory):** Proves to auditors that the logs have not been tampered with since they were recorded.
